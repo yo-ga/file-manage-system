@@ -1,0 +1,12 @@
+language: python
+python:
+  - '3.6'
+services:
+  - postgresql
+install:
+  - pip install -r requirments.txt
+  - pip install -r requirments/test.txt
+script:
+  - cd src
+  - python manage.py migrates
+  - py.test --cov=./ ./
