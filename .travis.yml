@@ -6,8 +6,8 @@ python:
 services:
   - postgresql
 install:
-  - pip install -r requirements.txt
-  - pip install -r requirements/test.txt
+  - pip install -U -r requirements.txt
+  - pip install -U -r requirements/test.txt
 script:
   - cd src
   - python manage.py migrates
