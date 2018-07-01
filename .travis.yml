@@ -10,5 +10,5 @@ install:
   - pip install -U -r requirements/test.txt
 script:
   - cd src
-  - python manage.py migrates
+  - flake8
   - py.test --cov=./ ./
