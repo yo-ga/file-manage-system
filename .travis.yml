@@ -1,11 +1,13 @@
 language: python
+virtualenv:
+  system_site_pakages: true
 python:
   - '3.6'
 services:
   - postgresql
 install:
-  - pip install -r requirments.txt
-  - pip install -r requirments/test.txt
+  - pip install -r requirements.txt
+  - pip install -r requirements/test.txt
 script:
   - cd src
   - python manage.py migrates
