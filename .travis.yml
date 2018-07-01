@@ -1,0 +1,14 @@
+language: python
+virtualenv:
+  system_site_pakages: true
+python:
+  - '3.6'
+services:
+  - postgresql
+install:
+  - pip install -U -r requirements.txt
+  - pip install -U -r requirements/test.txt
+script:
+  - cd src
+  - flake8
+  - py.test --cov=./ ./
